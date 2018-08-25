@@ -233,6 +233,7 @@ footer {
 
 @media print, screen and (max-width: 720px) {
   body {
+	background-size: 50%;
     word-wrap:break-word;
   }
 
