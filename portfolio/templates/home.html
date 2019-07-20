@@ -1,0 +1,94 @@
+<div class="container-fluid pl-0 pr-0" style="overflow:hidden">
+  <div class="jumbotron jumbotron-fluid bg-transparent">
+    <div class="container py-5 px-2">
+      <h1 class="display-4 display-md-4 py-5 px-3"><span class="custom-font">Khaleel Haboub</span> is a software engineer &
+        digital product designer.
+        <a href="http://Khaleel.me/cv/Khaleel_Haboub_CV.pdf">CV›</a></h1>
+    </div>
+  </div>
+  <div class="d-block d-sm-none">
+    <div class="row py-2" ng-repeat="project in projects | filter:{isArchive:false}">
+      <div class="col-auto align-self-start">
+        <img width="56" ng-src="{{project.icon}}" style="background: #fdfdfd;" alt="..."
+          class="figure-img img-fluid rounded-circle m-0">
+      </div>
+      <div class="col">
+        <p class="custom-font">{{project.title}}</p>
+        <p class="text-muted">{{project.headline}}</p>
+      </div>
+      <div class="col-auto align-self-end">›</div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block">
+    <div class="row align-items-center" style="min-height:100vh;"
+      ng-repeat="project in projects | filter:{isArchive:false}" elem-ready="someMethod()">
+
+      <div class="col offset-md-1" ng-class="{'order-md-2': $index % 2 == 1}">
+
+        <div class="col-sm-8 my-element" data-paroller-factor="0.3" data-paroller-factor-lg="0.2"
+          data-paroller-factor-md="0.2" data-paroller-factor-sm="-0.1" data-paroller-factor-xs="-0.1"
+          data-paroller-type="foreground" data-paroller-direction="vertical"
+          data-paroller-transition="transform .2s linear">
+          <h3 class="custom-font">{{project.title}}
+            <small><small class="text-muted" style="color: #bbc9c7;">{{project.headline}}</small></small>
+          </h3>
+          <p>{{project.description}}</p>
+          <!--<a class="btn btn-sm btn-light" href="gooogle.com" role="button">More Details.</a>-->
+        </div>
+      </div>
+      <div class="col-md-auto align-self-end"
+        ng-class="{'push-right': project.shift && $index % 2 == 0,'push-left': project.shift && $index % 2 == 1}">
+        <img ng-src="{{project.img}}" style="height: 100vh;" alt="..." class="figure-img img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <h1 class="display-4 display-md-4 py-5 px-3">Archive</h1>
+  <div><!-- class="d-none d-sm-block"-->
+    <div class="row no-gutters">
+      <div class="col-md-4 col-6" ng-repeat="project in projects | filter:{isArchive:true}">
+        <img ng-src="{{project.img}}" width="100%" class="archived-image" ng-class="{'alt': $index % 2 == 0}">
+      </div>
+    </div>
+  </div>
+<!--
+  <div class="d-block d-sm-none">
+    <div style="height:100vh; width: 100%; position: relative;" id="playground">
+      <span ng-repeat="circle in circles" class="rounded-circle"
+        style="background: url({{circle.icon}}); position: absolute; left:{{circle.xp}}%; top:{{circle.yp}}%; transform: scale({{getDistance(circle)}}); height: 25px;width: 25px;background-size: cover;">
+
+      </span>
+    </div>
+  </div>
+-->
+  <h1 class="display-4 display-md-4 py-5 px-3">Talks</h1>
+  <div class="col-md-5 offset-md-1" style="min-height: 70vh">
+
+  <ul class="list-group">
+      <li class="list-group-item"><b>ArabNet Riyadh </b><br> A dive into Google material design world.</li>
+      <li class="list-group-item"><b>Nama Almounra </b><br> Getting started with e-commerce.</li>
+      <li class="list-group-item"><b>Saudi Aramco </b><br> How to Build an MVP.</li>
+      <li class="list-group-item"><b>Young Entrepreneurs Forum </b><br> Panel speaker.</li>
+      <li class="list-group-item"><b>Wa'ed Meet & Greet </b><br> Panel speaker.</li>
+  </ul>
+
+  </div>
+<!--
+  <h1 class="display-4 display-md-4 py-5 px-3">Awards</h1>
+  <div class="row no-gutters">
+    <div class="col" ng-repeat="project in projects | filter:{isArchive:false}">
+      <img ng-src="{{project.img}}" width="100%" class="archived-image" ng-class="{'alt': $index % 2 == 0}">
+    </div>
+  </div>
+-->
+
+  <div class="jumbotron jumbotron-fluid bg-transparent">
+    <div class="container py-5 px-2 text-center">
+      <h1 class="display-4 display-md-4 py-5 px-3"><small>Hello@Khaleel.me</small></h1>
+    </div>
+  </div>
+</div>
