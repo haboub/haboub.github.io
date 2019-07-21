@@ -3,7 +3,7 @@
     <div class="container py-5 px-2">
       <h1 class="display-4 display-md-4 py-5 px-3"><span class="custom-font">Khaleel Haboub</span> is a software engineer &
         digital product designer.
-        <a href="http://Khaleel.me/cv/Khaleel_Haboub_CV.pdf">CV›</a></h1>
+        <a target="_blank" href="http://Khaleel.me/cv/Khaleel_Haboub_CV.pdf">CV›</a></h1>
     </div>
   </div>
   <div class="d-block d-sm-none">
@@ -21,7 +21,7 @@
   </div>
   <div class="d-none d-sm-block">
     <div class="row align-items-center" style="min-height:100vh;"
-      ng-repeat="project in projects | filter:{isArchive:false}" elem-ready="someMethod()">
+      ng-repeat="project in projects | filter:{isArchive:false}" elem-ready="paroller()">
 
       <div class="col offset-md-1" ng-class="{'order-md-2': $index % 2 == 1}">
 
@@ -69,6 +69,7 @@
   <div class="col-md-5 offset-md-1" style="min-height: 70vh">
 
   <ul class="list-group">
+      <li class="list-group-item"><b>Innovation Ecosystem Society </b><br>Dhahran Chapter Member</li>
       <li class="list-group-item"><b>ArabNet Riyadh </b><br> A dive into Google material design world.</li>
       <li class="list-group-item"><b>Nama Almounra </b><br> Getting started with e-commerce.</li>
       <li class="list-group-item"><b>Saudi Aramco </b><br> How to Build an MVP.</li>
