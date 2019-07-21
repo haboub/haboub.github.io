@@ -7,23 +7,25 @@
     </div>
   </div>
 
+
   <div class="d-block d-lg-none  px-lg-0">
+    <h1 class="display-4 display-md-4 py-3 px-4 py-lg-5 px-lg-3">Portfolio</h1>
 
     <div class="list-group list-group-flush">
       <a class="list-group-item p-0" ng-repeat="project in projects | filter:{isArchive:false}">
-        <img ng-src="{{project.img}}" width="100%" class="archived-image" ng-class="{'alt': $index % 2 == 0}">
+        <img ng-src="{{project.img}}" width="100%" class="archived-image">
         <div class="d-flex w-100 px-3 pt-2">
           <div style="min-width: 50px">
             <img width="56" ng-src="{{project.icon}}" style="background: #fdfdfd;" alt="..."
                  class="figure-img img-fluid rounded-circle m-0">
           </div>
           <div class="mb-1 ml-3">
-            <h5 class="mb-0 custom-font">{{project.title}}</h5>
+            <h5 class="mb-0 pt-1 custom-font">{{project.title}}</h5>
             <small class="text-muted">{{project.headline}}</small>
           </div>
           <small class="ml-auto text-muted">{{project.date}}</small>
         </div>
-        <p class="mb-1 px-3 small">{{project.description}}</p>
+        <p class="mb-5 px-3 pt-1 small">{{project.description}}</p>
       </a>
     </div>
   </div>
